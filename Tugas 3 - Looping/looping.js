@@ -14,7 +14,7 @@ i = 0;
 
 console.log("LOOPING KEDUA")
 while(i < 10){
-  console.log(balik + ' - ' + 'I love coding');
+  console.log(balik + ' - ' + 'I will become a mobile developer');
   
   balik = balik - 2;
   i++;
@@ -37,24 +37,34 @@ for(j=1; j<=20; j++){
 
 console.log('-------------------------------');
 
-var k;
-for(j=0; j<4; j++){
-  //for(k=0; k<8; k++){
-    console.log("########");
-  //}
+var hasil ='';
+for(var i=0; i<4; i++){
+  for(var j=0; j<8; j++){
+    hasil +='#';
+  }
+  hasil +='\n';
 }
+console.log(hasil);
 
 console.log('-------------------------------');
 
-var pager = "########"
-for(j=7; j>0; j--){
-  var pager2 = pager.substr(j);
-  console.log(pager2);
+// var pager = "########"
+// for(j=7; j>0; j--){
+//   var pager2 = pager.substr(j);
+//   console.log(pager2);
+// }
+
+hasil ='';
+for(var i=0; i<7; i++){
+  for(var j=0; j<=i; j++){
+    hasil +='#';
+  }
+  hasil +='\n';
 }
+console.log(hasil);
 
 console.log('-------------------------------');
 
-var gnjl = " # # # #"
 var gnp = "# # # # "
 
 for(j=1; j<=8; j++){
@@ -62,6 +72,16 @@ for(j=1; j<=8; j++){
     console.log(gnp);
   }
   else{
-    console.log(gnjl);
+    console.log(" " + gnp);
   }
 }
+
+// hasil ='';
+// for(var i=0; i<7; i++){
+//   for(var j=0; j<4; j++){
+//     hasil +=' ';
+//     hasil +='#';
+//   }
+//   hasil +='\n';
+// }
+// console.log(hasil);
