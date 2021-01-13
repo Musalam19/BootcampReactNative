@@ -46,8 +46,22 @@ for(j=0; j<4; j++){
 
 console.log('-------------------------------');
 
-// for(j=0; j<4; j++){
-//   for(k=0; k<8; k++){
-//     console.log('#');
-//   }
-// }
+var pager = "########"
+for(j=7; j>0; j--){
+  var pager2 = pager.substr(j);
+  console.log(pager2);
+}
+
+console.log('-------------------------------');
+
+var gnjl = " # # # #"
+var gnp = "# # # # "
+
+for(j=1; j<=8; j++){
+  if(j%2 == 0){
+    console.log(gnp);
+  }
+  else{
+    console.log(gnjl);
+  }
+}
