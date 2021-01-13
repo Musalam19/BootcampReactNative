@@ -1,30 +1,53 @@
-// LOOPING PERTAMA
-// 2 - I love coding
-// 4 - I love coding
-// 6 - I love coding
-// 8 - I love coding
-// 10 - I love coding
-// 12 - I love coding
-// 14 - I love coding
-// 16 - I love coding
-// 18 - I love coding
-// 20 - I love coding
-// LOOPING KEDUA
-// 20 - I will become a mobile developer
-// 18 - I will become a mobile developer      
-// 16 - I will become a mobile developer
-// 14 - I will become a mobile developer
-// 12 - I will become a mobile developer
-// 10 - I will become a mobile developer
-// 8 - I will become a mobile developer
-// 6 - I will become a mobile developer
-// 4 - I will become a mobile developer
-// 2 - I will become a mobile developer
-
-var i = 1;
+var i = 0;
 var genap = 2;
 
-while(i <= 10){
+console.log("LOOPING PERTAMA")
+while(i < 10){
   console.log(genap + ' - ' + 'I love coding');
-  genap++;
+  
+  genap = genap + 2;
+  i++;
 }
+
+var balik = 20;
+i = 0;
+
+console.log("LOOPING KEDUA")
+while(i < 10){
+  console.log(balik + ' - ' + 'I love coding');
+  
+  balik = balik - 2;
+  i++;
+}
+
+console.log('-------------------------------');
+
+var j;
+for(j=1; j<=20; j++){
+  if(j%3 == 0 && j%2 == 1){
+    console.log(j + " - " + "I Love Setan");
+  }
+  else if(j%2 == 0){
+    console.log(j + " - " + "Berkualitas");
+  }
+  else{
+    console.log(j + " - " + "Santai");
+  }
+}
+
+console.log('-------------------------------');
+
+var k;
+for(j=0; j<4; j++){
+  //for(k=0; k<8; k++){
+    console.log("########");
+  //}
+}
+
+console.log('-------------------------------');
+
+// for(j=0; j<4; j++){
+//   for(k=0; k<8; k++){
+//     console.log('#');
+//   }
+// }
