@@ -82,7 +82,7 @@ function sum(awalderet, akhirderet, step){
     }
     return total;
 
-  }
+  }//jika semua parameter tidak null maka masuk ke sini
   else if(awalderet != null && akhirderet != null && step != null){
     var tampung = rangeWithStep(awalderet, akhirderet, step);
     var total = 0;
@@ -92,11 +92,11 @@ function sum(awalderet, akhirderet, step){
     }
     return total;
 
-  }
+  }//jika hanya terdapat parameter awalderet maka sum bernilai awalderet
   else if(awalderet != null && akhirderet == null && step == null){
     total = awalderet;
     return total;
-  }
+  }//jika parameter kosong semua maka return 0;
   else{
     return 0;
   }
@@ -109,3 +109,46 @@ console.log(sum(15,10)) // 75
 console.log(sum(20, 10, 2)) // 90
 console.log(sum(1)) // 1
 console.log(sum()) // 0 
+
+console.log('\nNo.4-------------------------------\n');
+
+
+  var input = [
+                  ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+                  ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+                  ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+                  ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
+              ];
+  //console.log(input[0][0]);
+
+function dataHandling(masukan){
+  var n = masukan.length;
+  for(var i = 0; i < n; i++){
+    //for(var j = 0; j < 5; j++){
+      var satu = "Nomor ID: " + input[i][0];
+      var dua = "Nama Lengkap: " + input[i][1];
+      var tiga = "TTL: " + input[i][2] + " " + input[i][3];
+      var empat = "Hobi: " + input[i][4] + "\n";
+    //}
+      console.log(satu);
+      console.log(dua);
+      console.log(tiga);
+      console.log(empat);
+  }
+}
+dataHandling(input);
+console.log('\nNo.5-------------------------------\n');
+// // Code di sini
+function balikKata(kata){
+  var tampil = "";
+  for(i = kata.length-1; i >= 0; i--){
+      tampil += kata[i];
+  }
+  return tampil;
+} 
+
+console.log(balikKata("Kasur Rusak")) // kasuR rusaK
+console.log(balikKata("SanberCode")) // edoCrebnaS
+console.log(balikKata("Haji Ijah")) // hajI ijaH
+console.log(balikKata("racecar")) // racecar
+console.log(balikKata("I am Sanbers")) // srebnaS ma I 
