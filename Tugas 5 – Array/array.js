@@ -125,10 +125,10 @@ function dataHandling(masukan){
   var n = masukan.length;
   for(var i = 0; i < n; i++){
     //for(var j = 0; j < 5; j++){
-      var satu = "Nomor ID: " + input[i][0];
-      var dua = "Nama Lengkap: " + input[i][1];
-      var tiga = "TTL: " + input[i][2] + " " + input[i][3];
-      var empat = "Hobi: " + input[i][4] + "\n";
+      var satu = "Nomor ID: " + masukan[i][0];
+      var dua = "Nama Lengkap: " + masukan[i][1];
+      var tiga = "TTL: " + masukan[i][2] + " " + masukan[i][3];
+      var empat = "Hobi: " + masukan[i][4] + "\n";
     //}
       console.log(satu);
       console.log(dua);
@@ -152,3 +152,72 @@ console.log(balikKata("SanberCode")) // edoCrebnaS
 console.log(balikKata("Haji Ijah")) // hajI ijaH
 console.log(balikKata("racecar")) // racecar
 console.log(balikKata("I am Sanbers")) // srebnaS ma I 
+
+console.log('\nNo.6-------------------------------\n');
+var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
+dataHandling2(input)
+
+//["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
+//  *  Mei
+//  * ["1989", "21", "05"]
+//  * 21-05-1989
+//  * Roman Alamsyah
+function dataHandling2(masukkan){
+  var kalimat = masukkan;
+  var nama = masukkan[1] + "Elsharawy";
+  var kota = "Provinsi " + masukkan[2];
+  var gender = "Pria";
+  var sekolah = "SMA Internasional Metro";
+
+  kalimat.splice(1, 2, nama, kota);
+  kalimat.splice(4, 1, gender, sekolah);
+
+  console.log(kalimat);
+
+  //menampilkan bulan
+  var bulan = masukkan[3];
+  var baru = bulan.split("/");
+
+  //memasukkan format tanggal dd-mm-yyyy ke tampungan
+  var baru1 = baru.join("-");
+  //console.log(baru);
+
+  switch(baru[1]){
+    case "01": {console.log("Januari")};
+      break;
+    case "02": {console.log("Februari")};
+      break;
+    case "03": {console.log("Maret")};
+      break;
+    case "04": {console.log("April")};
+      break;
+    case "05": {console.log("Mei")};
+      break;
+    case "06": {console.log("Juni")};
+      break;
+    case "07": {console.log("Juli")};
+      break;
+    case "08": {console.log("Agustus")};
+      break;
+    case "09": {console.log("September")};
+      break;
+    case "10": {console.log("Oktober")};
+      break;
+    case "11": {console.log("November")};
+      break;
+    case "12": {console.log("Desember")};
+      break;
+    default:
+      break;
+  }
+
+  //menampilkan hasil split
+  console.log(baru.sort(function (value1, value2) { return value2 - value1 } ));
+
+  //menampilkan format tanggal dd-mm-yyyy
+  console.log(baru1);
+
+  //menampilkan nama baru
+  var namabaru = nama.slice(0, 15);
+  console.log(namabaru);
+}
